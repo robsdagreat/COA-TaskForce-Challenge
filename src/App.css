@@ -1,0 +1,22 @@
+.image-thumbnail {
+  transition: transform 0.3s ease-in-out;
+}
+
+.image-thumbnail:hover {
+  transform: scale(1.1);
+}
+.thumbnails-container {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-padding: 0.5rem;
+}
+
+.image-thumbnail2 {
+  scroll-snap-align: start;
+}
+
+.bg-lime-800 {
+  background-color: #84cc16; 
+  min-height: 100vh; 
+}
