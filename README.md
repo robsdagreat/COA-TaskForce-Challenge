@@ -1,97 +1,105 @@
-Challenge1: Interactive Photo Gallery
+COA Taskforce Take Home Challenge
+This repository contains one project and two coding challenges.
 
->Description:
-This project is an interactive photo gallery built with React and TypeScript. It includes features such as a zoom-in effect on hover, a click-to-view fullscreen image with a close button.
+Table of Contents
 
->Features:
+1.Challenge 1: Interactive Photo Gallery
+
+2.Coding Challenge 1: Array Manipulation
+
+3.Coding Challenge 2: String Transformation
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Challenge 1: Interactive Photo Gallery
+
+Description
+This project is an interactive photo gallery built with React and TypeScript. It includes features such as a zoom-in effect on hover and a click-to-view fullscreen image with a close button.
+
+Features
 
 Hover Zoom Effect: Images slightly zoom in when hovered.
 Fullscreen View: Click on an image to view it in fullscreen.
 Responsive Design: Adapts to different screen sizes.
 Installation and Setup
 
->Prerequisites:
+Prerequisites
 
-Make sure you have the following software installed on your machine:
-
+Ensure you have the following software installed on your machine:
 Node.js
-yarn
+Yarn
 
->Steps to Set Up and Run the Project:
+Steps to Set Up and Run the Project
 
-i.Clone the Repository:
+Clone the Repository
+git clone https://github.com/robsdagreat/COA-TaskForce-Challenge.git , navigate to the folder you just cloned.
 
-git clone https://github.com/your-username/your-repo-name.git , navigate to the folder you just cloned.
-
-ii. Install Dependencies
+Install Dependencies
 
 yarn install
 
-ii. Run the Development Server
+Run the Development Server
 
 yarn run dev
-
 This will start the development server and open the application in your default browser. If it doesn't, you can open your browser and navigate to http://localhost:3000.
 
-
->Scripts:
+Scripts
 
 yarn run dev: Start the development server.
 yarn run build: Build the project for production.
 
+Troubleshooting
 
+Ensure you have the correct versions of Node.js and Yarn installed.
+Make sure all dependencies are installed by running yarn install.
 
->Troubleshooting:
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
 
-Ensure you have the correct versions of Node.js and yarn installed.
-Make sure all dependencies are installed by running yarn --init or yarn install.
+Coding Challenge 1: Array Manipulation
 
+Approach
 
-Challenge2: Array Manipulation
+To tackle this challenge, a technique commonly used in Python called "Sliding Window" is employed. This technique works similarly to Quick Sorting by defining two pointers, left and right, for the subarrays and an initial sum to be incremented throughout the iteration.
 
->Approach:
+Steps
 
-In order to tackle this challenge I used a technic mostly used in Python called "Sliding Window" , which works more like Quick sorting by defining two pointers left and right for the subArrays and also a initial sum to be incremented throughout the iteration.
+1.Initialize current_sum to keep track of the sum of the current subarray, and two pointers left and right to define the subarray.
 
->Steps: 
+2.Iterate through the array using the right pointer.
 
-1.We initialize current_sum to keep track of the sum of the current subarray, and two pointers left and right to define the subarray.
+3.For each element, add it to the current_sum.
 
-2.We iterate through the array using the right pointer.
+4.If current_sum exceeds the target, start subtracting elements from the left side of the subarray (by incrementing left and subtracting arr[left] from current_sum) until current_sum is less than or equal to the target.
 
-3.For each element, we add it to the current_sum.
+5.If at any point current_sum becomes equal to the target, return True since a subarray that sums up to the target has been found.
 
-4.If the current_sum exceeds the target, we start subtracting elements from the left side of the subarray (by incrementing left and subtracting arr[left] from current_sum) until current_sum is less than or equal to the target.
+6.If the end of the array is reached and a subarray that sums up to the target has not been found, return False.
 
-5.If at any point current_sum becomes equal to the target, we return True since we've found a subarray that sums up to the target.
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
 
-6.If we reach the end of the array and haven't found a subarray that sums up to the target, we return False.
+Coding Challenge 2: String Transformation
 
+Approach
 
-Challenge3: String Transformation
+To tackle this challenge, a technique called "Modular Arithmetic" is used. This technique takes advantage of the divisibility of numbers using the modulo operator % to determine which transformation to apply to the string.
 
->Approach:
+Steps
 
-In order to tackle this challenge I used a technic called "Modular Arithmetic" which takes advantage of the divisibility of numbers using modulo operator % to determine which transformation to be made on the string.
+1.Calculate the length of the input string using str.length.
 
->Steps:
+2.Initialize an empty string transformedStr to store the transformed string.
 
-1.We first calculate the length of the input string using str.length.
-
-2.We initialize an empty string transformedStr to store the transformed string.
-
-3.We check the divisibility of the string length by 15, 3, and 5 using the modulo operator %.
+3.Check the divisibility of the string length by 15, 3, and 5 using the modulo operator %.
 
 4.If the length is divisible by 15:
 
-We first reverse the string using the split(), reverse(), and join() methods.
-Then, we replace each character with its ASCII code using the split(), map() with charCodeAt(0), and join(" ") methods.
+Reverse the string using the split(), reverse(), and join() methods.
+Replace each character with its ASCII code using split(), map(charCodeAt(0)), and join(" ") methods.
 
-5.If the length is divisible by 3 but not by 15, we simply reverse the string.
+5.If the length is divisible by 3 but not by 15, simply reverse the string.
 
-6.If the length is divisible by 5 but not by 15 or 3, we replace each character with its ASCII code.
+6.If the length is divisible by 5 but not by 15 or 3, replace each character with its ASCII code.
 
-7.If the length is not divisible by 3, 5, or 15, we return the original string.
+7.If the length is not divisible by 3, 5, or 15, return the original string.
 
-8.Finally, we return the transformedStr.
-
+8.Finally, return transformedStr.
